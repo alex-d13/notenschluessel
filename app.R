@@ -43,7 +43,11 @@ ui <- fluidPage(
                       'Note 5 (%)', value = '40-20', placeholder = '40-20'),
             textInput('grade6',
                       'Note 6 (%)', value = '20-0', placeholder = '20-0'),
-            p('Vorsicht: Aktuell wird noch nicht geprüft, ob Lücken zwischen den einzelnen Notenintervalle sind. Ist aber work in progress ;)')
+            p('Vorsicht: Aktuell wird noch nicht geprüft, ob Lücken zwischen den einzelnen Notenintervalle sind. Ist aber work in progress ;)'),
+            hr(),
+            h3('References'),
+            p('Alexander Dietrich, 09 - 2022'),
+            HTML('Source Code: <a href=https://github.com/alex-d13/notenschluessel>GitHub</a>')
         ),
 
         # Show a plot of the generated distribution
@@ -51,12 +55,7 @@ ui <- fluidPage(
            dataTableOutput("grading_table"),
            hr(),
            plotOutput('grading_table_plot'),
-           hr(),
-           fluidRow(
-             column(5),
-             column(5, box(title='References', status = 'primary', solidHeader = T,
-                           p('blabla'), width = 4))
-           )
+           hr()
         )
     )
 )
